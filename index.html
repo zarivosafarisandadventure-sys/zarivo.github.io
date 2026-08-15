@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zarivo Safaris & Adventure | Explore Kenya</title>
+<meta name="description" content="Zarivo Safaris & Adventure offers unforgettable wildlife safaris, cultural tours, adventure travel and customized Kenya safari experiences.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f8f8f8;color:#333;line-height:1.6}
+a{text-decoration:none}
+img{max-width:100%;display:block}
+header{background:#123f18;color:#fff;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.logo{color:#D4AF37;font-size:23px;font-weight:bold}
+nav{display:flex;gap:20px}
+nav a{color:#fff;font-weight:bold}
+nav a:hover{color:#D4AF37}
+.menu{display:none;font-size:28px;cursor:pointer}
+.hero{min-height:90vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+.hero-content{max-width:850px;padding:30px}.hero h1{font-size:58px;margin-bottom:20px}.hero p{font-size:22px;margin-bottom:30px}
+.btn{display:inline-block;background:#D4AF37;color:#111;padding:14px 30px;border-radius:5px;font-weight:bold;margin:6px}.btn-green{background:#1B5E20;color:white}
+section{padding:80px 7%}.section-title{text-align:center;color:#1B5E20;font-size:34px;margin-bottom:15px}.section-subtitle{text-align:center;max-width:750px;margin:0 auto 45px;color:#666}
+.about-container{max-width:1000px;margin:auto;text-align:center}.about-container p{font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:.3s}.card:hover{transform:translateY(-7px)}
+.card img{width:100%;height:220px;object-fit:cover}.card-content{padding:22px}.card h3{color:#1B5E20;margin-bottom:10px}.card p{color:#666}
+.why{background:#edf5ed}.why-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.why-box{background:white;padding:30px;text-align:center;border-radius:10px;box-shadow:0 3px 12px rgba(0,0,0,.08)}.why-box .icon{font-size:40px;margin-bottom:10px}.why-box h3{color:#1B5E20}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.gallery figure{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}.gallery img{width:100%;height:260px;object-fit:cover}.gallery figcaption{padding:14px;text-align:center;font-weight:bold;color:#1B5E20}
+.booking{background:#f1f1f1}.booking-form{max-width:850px;margin:auto;background:white;padding:35px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.form-group{margin-bottom:18px}.form-group.full{grid-column:1/-1}.form-group label{display:block;font-weight:bold;margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px;border:1px solid #ccc;border-radius:5px;font-size:15px}.form-group textarea{min-height:120px}.submit{width:100%;border:none;cursor:pointer;font-size:16px}
+.faq-container{max-width:900px;margin:auto}.faq{background:white;margin-bottom:12px;border-radius:7px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}.faq-question{padding:18px 20px;font-weight:bold;color:#1B5E20;cursor:pointer;display:flex;justify-content:space-between}.faq-answer{display:none;padding:0 20px 20px;color:#555}.faq.active .faq-answer{display:block}
+.testimonials{background:#123f18;color:white}.testimonials .section-title{color:#D4AF37}.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}.testimonial{background:rgba(255,255,255,.1);padding:25px;border-radius:10px}.testimonial p{font-style:italic;margin-bottom:15px}
+.contact-container{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-box{background:white;padding:30px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}.contact-box h3{color:#1B5E20;margin-bottom:15px}.contact-item{margin:15px 0}.contact-item a{color:#1B5E20;font-weight:bold}
+.whatsapp{display:inline-block;background:#25D366;color:white;padding:14px 25px;border-radius:30px;margin-top:15px;font-weight:bold}
+footer{background:#092d0e;color:white;text-align:center;padding:35px 7%}footer h2{color:#D4AF37;margin-bottom:10px}.footer-links{margin:20px 0}.footer-links a{color:white;margin:0 10px}.copyright{color:#bbb;margin-top:15px}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:58px;height:58px;background:#25D366;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:999;box-shadow:0 4px 15px rgba(0,0,0,.3)}
+@media(max-width:800px){
+header{padding:15px 5%}.menu{display:block}nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#123f18;flex-direction:column;padding:20px;text-align:center}nav.active{display:flex}nav a{padding:10px}.hero h1{font-size:38px}.hero p{font-size:18px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}.contact-container{grid-template-columns:1fr}section{padding:60px 5%}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Zarivo Safaris & Adventure</div>
+<div class="menu" onclick="toggleMenu()">☰</div>
+<nav id="navigation">
+<a href="#home">Home</a><a href="#about">About</a><a href="#safaris">Safaris</a><a href="#destinations">Destinations</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#booking">Booking</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Experience Kenya Like Never Before</h1>
+<p>Wildlife Safaris • Cultural Experiences • Adventure Travel</p>
+<a href="#booking" class="btn">Book Your Safari</a>
+<a href="#safaris" class="btn btn-green">Explore Safaris</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Zarivo Safaris & Adventure</h2>
+<p class="section-subtitle">Your gateway to unforgettable African adventures.</p>
+<div class="about-container">
+<p><strong>Zarivo Safaris & Adventure</strong> is a Kenya-based travel company dedicated to creating memorable wildlife, cultural and adventure experiences.</p><br>
+<p>From the breathtaking plains of the Maasai Mara to spectacular landscapes and unique cultures, we help travelers discover the beauty of East Africa.</p>
+</div>
+</section>
+
+<section id="safaris">
+<h2 class="section-title">Our Safari Packages</h2>
+<p class="section-subtitle">Choose an adventure and let us help you create unforgettable memories.</p>
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Maasai Mara Safari</h3><p>Experience Kenya's famous Maasai Mara, home to the Big Five and spectacular wildlife.</p><a href="#booking" class="btn">Book Now</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Amboseli Safari</h3><p>Enjoy spectacular views of Mount Kilimanjaro and large herds of elephants.</p><a href="#booking" class="btn">Book Now</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1527169402691-feff5539e52c?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Lake Nakuru Safari</h3><p>Discover rhinos, birds and beautiful scenery around Lake Nakuru National Park.</p><a href="#booking" class="btn">Book Now</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Samburu Adventure</h3><p>Explore northern Kenya and discover unique wildlife and spectacular landscapes.</p><a href="#booking" class="btn">Book Now</a></div></div>
+</div>
+</section>
+
+<section id="destinations">
+<h2 class="section-title">Popular Destinations</h2>
+<p class="section-subtitle">Discover some of Kenya's most incredible destinations.</p>
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Maasai Mara</h3><p>Famous for the Big Five and the Great Wildebeest Migration.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Amboseli</h3><p>A spectacular destination known for elephants and Mount Kilimanjaro views.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1527169402691-feff5539e52c?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Lake Nakuru</h3><p>A beautiful destination for wildlife and bird watching.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?auto=format&fit=crop&w=900&q=85"><div class="card-content"><h3>Nairobi</h3><p>Experience Kenya's capital and Nairobi National Park.</p></div></div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<p class="section-subtitle">Flexible travel services designed around your needs.</p>
+<div class="why-grid">
+<div class="why-box"><div class="icon">🦁</div><h3>Wildlife Safaris</h3><p>Guided wildlife experiences across Kenya.</p></div>
+<div class="why-box"><div class="icon">🏕️</div><h3>Camping Adventures</h3><p>Authentic outdoor experiences surrounded by nature.</p></div>
+<div class="why-box"><div class="icon">👨‍👩‍👧‍👦</div><h3>Family Tours</h3><p>Family-friendly adventures designed for all ages.</p></div>
+<div class="why-box"><div class="icon">🚙</div><h3>Airport Transfers</h3><p>Reliable transportation to and from your destination.</p></div>
+<div class="why-box"><div class="icon">🌍</div><h3>Custom Safaris</h3><p>Create an itinerary based on your interests and budget.</p></div>
+<div class="why-box"><div class="icon">🏛️</div><h3>Cultural Tours</h3><p>Experience Kenya's rich cultures and communities.</p></div>
+</div>
+</section>
+
+<section class="why">
+<h2 class="section-title">Why Choose Zarivo?</h2>
+<div class="why-grid">
+<div class="why-box"><div class="icon">⭐</div><h3>Professional Service</h3><p>We focus on making every journey comfortable and memorable.</p></div>
+<div class="why-box"><div class="icon">💰</div><h3>Affordable Packages</h3><p>Flexible packages designed for different budgets.</p></div>
+<div class="why-box"><div class="icon">🛡️</div><h3>Safety First</h3><p>Your comfort and safety are important throughout your journey.</p></div>
+<div class="why-box"><div class="icon">❤️</div><h3>Personal Experience</h3><p>Trips designed around your interests and preferences.</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="section-title">Zarivo Gallery</h2>
+<p class="section-subtitle">A selection of photos for Zarivo Safaris & Adventure.</p>
+<div class="gallery">
+<figure><img src="gallery/zarivo-gallery-1.jpg" alt="Zarivo accommodation and lounge"><figcaption>Comfortable Accommodation</figcaption></figure>
+<figure><img src="gallery/zarivo-gallery-2.jpg" alt="Zarivo accommodation interior"><figcaption>Guest Room & Interior</figcaption></figure>
+<figure><img src="gallery/zarivo-gallery-3.jpg" alt="Zarivo accommodation courtyard"><figcaption>Beautiful Courtyard</figcaption></figure>
+</div>
+</section>
+
+<section class="booking" id="booking">
+<h2 class="section-title">Book Your Safari</h2>
+<p class="section-subtitle">Send us your travel details and our team will contact you.</p>
+<div class="booking-form">
+<form action="mailto:zarivosafarisandadventure@gmail.com" method="post" enctype="text/plain">
+<div class="form-grid">
+<div class="form-group"><label>Full Name</label><input type="text" name="Full Name" placeholder="Your full name" required></div>
+<div class="form-group"><label>Phone Number</label><input type="tel" name="Phone" placeholder="+254..." required></div>
+<div class="form-group"><label>Email Address</label><input type="email" name="Email" placeholder="Your email" required></div>
+<div class="form-group"><label>Safari Package</label><select name="Safari Package"><option>Maasai Mara Safari</option><option>Amboseli Safari</option><option>Lake Nakuru Safari</option><option>Samburu Adventure</option><option>Custom Safari</option></select></div>
+<div class="form-group"><label>Travel Date</label><input type="date" name="Travel Date"></div>
+<div class="form-group"><label>Number of Travelers</label><input type="number" name="Travelers" min="1" placeholder="Number of people"></div>
+<div class="form-group full"><label>Message / Special Request</label><textarea name="Message" placeholder="Tell us about your safari requirements..."></textarea></div>
+</div>
+<button class="btn submit" type="submit">Send Booking Request</button>
+</form>
+</div>
+</section>
+
+<section id="faq">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<p class="section-subtitle">Answers to common questions from our travelers.</p>
+<div class="faq-container">
+<div class="faq"><div class="faq-question" onclick="toggleFAQ(this)">What is the best time to visit Kenya?<span>+</span></div><div class="faq-answer">Kenya can be visited throughout the year. The dry seasons are popular for wildlife viewing, while the Great Wildebeest Migration is generally associated with the middle and later part of the year.</div></div>
+<div class="faq"><div class="faq-question" onclick="toggleFAQ(this)">How many days should I spend on safari?<span>+</span></div><div class="faq-answer">The ideal safari length depends on your destinations and interests. Short trips can focus on one destination, while longer trips allow you to combine several parks and experiences.</div></div>
+<div class="faq"><div class="faq-question" onclick="toggleFAQ(this)">Can you customize a safari?<span>+</span></div><div class="faq-answer">Yes. We can help create customized safari itineraries based on your destinations, travel dates, activities, group size and budget.</div></div>
+<div class="faq"><div class="faq-question" onclick="toggleFAQ(this)">Do you organize airport transfers?<span>+</span></div><div class="faq-answer">Yes. Airport transfers can be arranged as part of your travel package.</div></div>
+<div class="faq"><div class="faq-question" onclick="toggleFAQ(this)">How do I book a safari?<span>+</span></div><div class="faq-answer">You can contact us through WhatsApp, phone or email. You can also use the booking form on this website.</div></div>
+</div>
+</section>
+
+<section class="testimonials">
+<h2 class="section-title">What Our Travelers Say</h2>
+<div class="testimonial-grid">
+<div class="testimonial"><p>"An unforgettable experience. Kenya's wildlife and landscapes were amazing."</p><strong>— Safari Guest</strong></div>
+<div class="testimonial"><p>"The safari was well organized and enjoyable from beginning to end."</p><strong>— Happy Traveler</strong></div>
+<div class="testimonial"><p>"Beautiful destinations, great adventure and memories we will always treasure."</p><strong>— Zarivo Guest</strong></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Zarivo Safaris & Adventure</h2>
+<p class="section-subtitle">Ready for your next adventure? Get in touch with us.</p>
+<div class="contact-container">
+<div class="contact-box">
+<h3>Contact Information</h3>
+<div class="contact-item">📞 Phone:<br><a href="tel:+254769594837">+254 769 594 837</a></div>
+<div class="contact-item">📱 WhatsApp:<br><a href="https://wa.me/254769594837" target="_blank">+254 769 594 837</a></div>
+<div class="contact-item">📧 Email:<br><a href="mailto:zarivosafarisandadventure@gmail.com">zarivosafarisandadventure@gmail.com</a></div>
+<div class="contact-item">📍 Location:<br>Nairobi, Kenya</div>
+<a class="whatsapp" href="https://wa.me/254769594837?text=Hello%20Zarivo%20Safaris%20%26%20Adventure%2C%20I%20would%20like%20to%20plan%20a%20safari." target="_blank">💬 Chat With Us on WhatsApp</a>
+</div>
+<div class="contact-box">
+<h3>Plan Your Adventure</h3>
+<p>Tell us where you would like to go, when you would like to travel and how many people will be traveling.</p><br>
+<p>Our team will help you plan an unforgettable Kenyan adventure.</p><br>
+<a href="mailto:zarivosafarisandadventure@gmail.com" class="btn">📧 Email Us</a>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>Zarivo Safaris & Adventure</h2>
+<p>Explore. Discover. Adventure Awaits.</p>
+<div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#safaris">Safaris</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<p>📞 +254 769 594 837</p>
+<p>📧 zarivosafarisandadventure@gmail.com</p>
+<p class="copyright">© 2026 Zarivo Safaris & Adventure. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/254769594837?text=Hello%20Zarivo%20Safaris%20%26%20Adventure%2C%20I%20am%20interested%20in%20booking%20a%20safari." target="_blank">💬</a>
+
+<script>
+function toggleMenu(){document.getElementById("navigation").classList.toggle("active")}
+function toggleFAQ(element){element.parentElement.classList.toggle("active")}
+</script>
+</body>
+</html>
